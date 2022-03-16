@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RENT</title>
+</head>
+<body>
+<h2><a href="/">back</a> </h2>
+<table border="1">
+    <tbody>
+    <th> name </th>
+    <th> manufacturer </th>
+    <th> availability </th>
+    <th> Rent </th>
+    <tr th:if="${rentData.empty}">
+        <td colspan="2"> No cars Available </td>
+    </tr>
+    <tr th:each="rent : ${rentData}">
+        <td><span th:text="${rent.name}"> name </span></td>
+        <td><span th:text="${rent.manufacturer}"> manufacturer </span></td>
+        <td><span th:text="${rent.availability}"> availability </span></td>
+        <td><a th:href="@{/rent/new-rent(id=${rent.id})}"> Rent </a></td>
+    </tr>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+<h2><a href="/">back</a> </h2>
+<table border="1">
+    <tbody>
+    <tr th:if="${recordData.empty}">
+        <td colspan="2"> No Records </td>
+    </tr>
+    <tr th:each="record : ${recordData}">
+        <td><span th:text="${record.id}"> id </span></td>
+        <td><span th:text="${record.carId}"> carId </span></td>
+        <td><span th:text="${record.date}"> availability </span></td>
+    </tr>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

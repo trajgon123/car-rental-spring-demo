@@ -1,0 +1,19 @@
+h3 {
+    font-family: sans-serif;
+    font-size: 1.0em;
+    text-transform: uppercase;
+}
+
+strong {
+    font-weight: 700;
+    background-color: yellow;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+
+a {
+    font-family: sans-serif;
+}

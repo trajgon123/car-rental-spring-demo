@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+</head>
+<body>
+<br>
+<h3><a href="rent">rent a car (user)</a></h3> <br>
+<h3><a href="warehouse">warehouse (admin)</a></h3> <br>
+Current time is <span th:text="${serverTime}"/><br>
+<button type="button" th:onclick="showAlert();">check js</button>
+
+</body>
+</html>

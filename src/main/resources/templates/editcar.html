@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>edit car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Edit car</h1>
+<form action="#" th:action="@{/warehouse-edit(id=${warehouseItem.id})}" th:object="${warehouseItem}" method="post">
+    <p>Name: <input type="text" th:field="${warehouseItem.name}"/></p>
+    <p>manufacturer: <input type="text" th:field="${warehouseItem.manufacturer}"/></p>
+    <p>availability<input type="checkbox" name="availability" th:field="${warehouseItem.availability}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>

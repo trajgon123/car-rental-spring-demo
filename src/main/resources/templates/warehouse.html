@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Warehouse</title>
+</head>
+<body>
+<h3><a href="/">back</a> </h3>
+
+<h3><a href="/warehouse-new">add item</a> </h3>
+<table border="1">
+
+    <th> ID </th>
+    <th> name </th>
+    <th> manufacturer </th>
+    <th> availability </th>
+    <th> edit </th>
+    <th> remove </th>
+    <th> records </th>
+    <tbody>
+    <tr th:if="${warehouseData.empty}">
+        <td colspan="2"> No cars Available </td>
+    </tr>
+    <tr th:each="warehouse : ${warehouseData}">
+        <td><span th:text="${warehouse.id}"> ID </span></td>
+        <td><a th:href="@{/records(carId=${warehouse.id})}"><span th:text="${warehouse.name}"> name </span></a></td>
+        <td><span th:text="${warehouse.manufacturer}"> manufacturer </span></td>
+        <td><span th:text="${warehouse.availability}"> availability </span></td>
+        <td><a th:href="@{/warehouse-edit(id=${warehouse.id})}"> Edit </a></td>
+        <td><a th:href="@{/warehouse-remove(id=${warehouse.id})}"> Remove </a></td>
+        <td><a th:href="@{/records(carId=${warehouse.id})}"> Records </a></td>
+    </tr>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

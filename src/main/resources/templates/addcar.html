@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>add car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Add car</h1>
+<form action="#" th:action="@{/warehouse-new}" th:object="${warehouseItem}" method="post">
+    <p>Name: <input type="text" name="name" th:value="ceed"/></p>
+    <p>manufacturer: <input type="text" name="manufacturer" th:value="kia"/></p>
+    <p>availability<input type="checkbox" th:field="${warehouseItem.availability}"/></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
